@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrispEdge</title>
+    <!-- TAILWIND CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;600;700;800;900&family=Work+Sans:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TAILWIND CONFIG -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              text: "#030303",
+              background: "#fafafa",
+              primary: "#5e5e5e",
+              secondary: "#e3e3e3",
+              accent: "#2e2e2e",
+              textDark: "#fafafa",
+              backgroundDark: "#030303",
+              primaryDark: "#5e5e5e",
+              secondaryDark: "#171717",
+              accentDark: "#797979",
+            },
+            fontFamily: {
+              work: ["Work Sans", "sans-serif"],
+              roboto: ["Roboto Slab", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- HEADER STARTS -->
+    <header>
+      <!-- NAVIGATION BAR -->
+      <div class="bg-accent">
+        <nav
+          class="mx-auto container md:px-16 px-5 py-10 font-roboto flex justify-between"
+        >
+          <!-- NAVBAR LEFT -->
+          <a href="" class="flex-1"
+            ><h1 class="text-5xl text-background tracking-[10px]">CRISP</h1>
+          </a>
+          <!-- NAVBAR RIGHT -->
+          <div class="flex-1 flex justify-end items-center">
+            <div x-data="{ isOpen: false }" class="relative">
+              <!-- Dropdown toggle button -->
+              <button
+                @click="isOpen = !isOpen"
+                class="relative z-10 block p-1 bg-background border border-transparent rounded-md focus:ring-opacity-100 focus:ring-primary focus:ring hover:ring hover:ring-primary focus:outline-none duration-300 scale-1 hover:scale-110 focus:scale-110"
+              >
+                <img
+                  width="35"
+                  height="35"
+                  src="https://img.icons8.com/ios/50/shopping-bag--v3.png"
+                  alt="shopping-bag--v3"
+                />
+                <div
+                  class="absolute bg-red-500 -top-3 right-[-6px] px-[4px] rounded-lg font-work font-medium text-white"
+                  id="shoppingCartNotificationCounter"
+                >
+                  2
+                </div>
+              </button>
+
+              <!-- Dropdown menu -->
+              <div
+                x-show="isOpen"
+                @click.away="isOpen = false"
+                x-transition:enter="transition ease-out duration-100"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-100"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90"
+                class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+                >
+                  your profile
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+                >
+                  Your projects
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+                >
+                  Help
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+                >
+                  Settings
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+                >
+                  Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- BANNER SECTION -->
+      <div></div>
+    </header>
+    <!-- HEADER ENDS -->
+    <!-- MAIN STARTS -->
+    <main></main>
+    <!-- MAIN ENDS -->
+    <!-- FOOTER BEGINS -->
+    <footer></footer>
+
+    <!-- FOOTER ENDS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.12.3/cdn.js"></script>
+  </body>
+</html>
