@@ -71,7 +71,7 @@
                   class="absolute bg-red-500 -top-3 right-[-6px] px-[4px] rounded-lg font-work font-medium text-white"
                   id="shoppingCartNotificationCounter"
                 >
-                  2
+                  0
                 </div>
               </button>
 
@@ -85,38 +85,27 @@
                 x-transition:leave="transition ease-in duration-100"
                 x-transition:leave-start="opacity-100 scale-100"
                 x-transition:leave-end="opacity-0 scale-90"
-                class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800"
+                class="absolute right-0 z-20 w-64 py-2 px-2 mt-2 origin-top-right bg-background border-2 border-accent rounded-md shadow-xl flex flex-col items-center justify-center space-y-3"
               >
-                <a
-                  href="#"
-                  class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+                <!-- SELECTED PRODUCTS GOES HERE -->
+                <hr class="border-accent w-full" />
+
+                <div class="flex flex-col items-center justify-center">
+                  <!-- PLACEHOLDER FOR SELECTED PRODUCTS -->
+                  <p class="text-gray-500 text-center">
+                    Add products to get started!
+                  </p>
+                </div>
+                <hr class="border-accent w-full" />
+                <p class="text-accent font-work font-medium text-lg">
+                  Total: <span id="totalPrice">0.00</span>TK
+                </p>
+                <button
+                  id="checkOutButton"
+                  class="bg-accent text-background rounded-md px-12 py-2 scale-100 hover:scale-[1.02] duration-300 font-work"
                 >
-                  your profile
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
-                >
-                  Your projects
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
-                >
-                  Help
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
-                >
-                  Settings
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
-                >
-                  Sign Out
-                </a>
+                  Check Out
+                </button>
               </div>
             </div>
           </div>
