@@ -68,16 +68,17 @@ allProducts = [
 ];
 
 // ----------------------- T SHIRT SECTION --------------------------------------------
+tShirtCatalogue = document.getElementById("tshirt-section");
+seeMoreButtonTshirt = document.getElementById("btn-seemore-tshirt");
 // FILTERING OUT T SHIRTS ONLY
 const tShirts = allProducts.filter((product) => product.category === "T-shirt");
 // CREATING THE PRODUCT CARDS AND ADDING TO T SHIRT SECTION
-const showTshirt = (total) => {
-  tShirtCatalogue = document.getElementById("tshirt-section");
+const renderProductCards = (total) => {
   tShirtCatalogue.innerHTML = "";
   tShirts.slice(0, total).forEach((product) => {
     const productCardTemplate = `
     <div class="bg-white w-full shadow-lg rounded-lg hover:scale-[1.003] duration-300 flex flex-col items-center p-2">
-      <img class="rounded-lg mb-4 w-full h-[300px] object-cover" src="${product.image}" alt="PIC" />
+      <img class="rounded-lg mb-4 w-full h-[300px] object-cover" src="${product.image}" alt="" />
       <div class="text-center space-y-2 px-4 w-full">
         <h3 class="text-lg sm:text-xl font-medium">${product.name}</h3>
         <p class="text-gray-500 max-w-lg text-sm sm:text-base h-16 xl:h-12">${product.description}</p>
@@ -93,11 +94,8 @@ const showTshirt = (total) => {
     tShirtCatalogue.innerHTML += productCardTemplate;
   });
   const remainingProducts = tShirts.length - total;
-  if (remainingProducts > 0) {
-    document.getElementById("btn-seemore-tshirt").style.display = "block";
-  } else {
-    document.getElementById("btn-seemore-tshirt").style.display = "none";
-  }
+
+  seeMoreButtonTshirt.style.display = remainingProducts > 0 ? "block" : "none";
 };
 
 // SEE MORE BUTTON FUNCTIONALITY
@@ -107,9 +105,9 @@ if (screen.width >= 768 && screen.width < 1024) {
   stepSize = 3;
 }
 let countOfTShirtShown = stepSize;
-showTshirt(countOfTShirtShown);
-document.getElementById("btn-seemore-tshirt").addEventListener("click", () => {
+renderProductCards(countOfTShirtShown);
+seeMoreButtonTshirt.addEventListener("click", () => {
   countOfTShirtShown += stepSize;
-  showTshirt(countOfTShirtShown);
+  renderProductCards(countOfTShirtShown);
 });
 // -----------------------------------------------------------------------------------
