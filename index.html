@@ -41,7 +41,7 @@
       };
     </script>
   </head>
-  <body>
+  <body class="bg-background">
     <!-- HEADER STARTS -->
     <header>
       <!-- NAVIGATION BAR -->
@@ -98,7 +98,7 @@
                 </div>
                 <hr class="border-accent w-full" />
                 <p class="text-accent font-work font-medium text-lg">
-                  Total: <span id="totalPrice">0.00</span>TK
+                  Total: $ <span id="totalPrice">0.00</span>
                 </p>
                 <button
                   id="checkOutButton"
@@ -111,18 +111,33 @@
           </div>
         </nav>
       </div>
-
-      <!-- BANNER SECTION -->
-      <div></div>
     </header>
     <!-- HEADER ENDS -->
     <!-- MAIN STARTS -->
-    <main></main>
+    <main class="mx-auto container md:px-16 px-5 py-10 font-work">
+      <h1 class="text-4xl mb-12">All Products</h1>
+      <!-- T SHIRT SECTION -->
+      <section class="space-y-4">
+        <h2 class="text-3xl">T-Shirt Terrace</h2>
+        <p class="text-sm sm:text-lg max-w-[800px]">
+          The timeless design, ribbed neckline, and Oeko-tex Certification align
+          perfectly with the Crisp ethos, defining your fashionable choice.
+        </p>
+        <!-- T SHIRT CATALOGUE -->
+        <div
+          id="tshirt-section"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- T SHIRT PRODUCTS GET ADDED HERE VIA JS -->
+        </div>
+      </section>
+    </main>
     <!-- MAIN ENDS -->
     <!-- FOOTER BEGINS -->
     <footer></footer>
 
     <!-- FOOTER ENDS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.12.3/cdn.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
