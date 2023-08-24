@@ -85,16 +85,40 @@
                 x-transition:leave="transition ease-in duration-100"
                 x-transition:leave-start="opacity-100 scale-100"
                 x-transition:leave-end="opacity-0 scale-90"
-                class="absolute right-0 z-20 w-64 py-2 px-2 mt-2 origin-top-right bg-background border-2 border-accent rounded-md shadow-xl flex flex-col items-center justify-center space-y-3"
+                class="absolute right-0 z-20 w-fit py-2 px-2 mt-2 origin-top-right bg-background border-2 border-accent rounded-md shadow-xl flex flex-col items-center justify-center space-y-3"
               >
-                <!-- SELECTED PRODUCTS GOES HERE -->
                 <hr class="border-accent w-full" />
+                <!-- SELECTED PRODUCTS GOES HERE -->
+                <div
+                  class="flex flex-col items-center justify-center space-y-2"
+                  id="selectedItemsContainer"
+                >
+                  <div class="flex justify-between">
+                    <div class="flex gap-2">
+                      <img
+                        src="products_images/tshirts/blackt.jpg"
+                        class="w-16 rounded-lg object-cover"
+                      />
+                      <div>
+                        <p class="w-56 text-sm">Monochrome Tee</p>
+                        <p class="w-56 text-base">Price: $ <span>0.00</span></p>
+                        <p class="w-56 text-lg">x <span>1</span></p>
+                      </div>
+                    </div>
 
-                <div class="flex flex-col items-center justify-center">
-                  <!-- PLACEHOLDER FOR SELECTED PRODUCTS -->
-                  <p class="text-gray-500 text-center">
+                    <div class="flex items-center">
+                      <button
+                        class="bg-red-500 text-white px-2 py-1 rounded-xl font-work hover:scale-[1.05] duration-300"
+                      >
+                        X
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- PLACEHOLDER FOR SELECTED PRODUCTS
+                  <p class="text-gray-500 text-center" id="selectedItemsPlaceholder">
                     Add products to get started!
-                  </p>
+                  </p> -->
                 </div>
                 <hr class="border-accent w-full" />
                 <p class="text-accent font-work font-medium text-lg">
