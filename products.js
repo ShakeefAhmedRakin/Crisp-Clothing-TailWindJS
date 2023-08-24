@@ -56,7 +56,7 @@ allProducts = [
     price: 25.99,
     description:
       "The perfect balance of style and sky for your everyday adventures",
-    image: "products_images/tshirts/skyt.JPG",
+    image: "products_images/tshirts/skyt.jpg",
   },
   {
     name: "Salmon Elegance Tee",
