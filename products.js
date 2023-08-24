@@ -84,7 +84,7 @@ const showTshirt = (total) => {
         <p class="text-gray-500 max-w-lg text-sm sm:text-base h-16 xl:h-12">${product.description}</p>
         <div class="flex items-center justify-between w-full py-2">
           <span class="text-gray-500 text-xl">$ ${product.price}</span>
-          <button onClick="addToCartButton()" class="border-accent border-2 text-accent font-semibold hover:bg-accent hover:text-white duration-300 px-2 py-2 rounded-md">
+          <button onClick="addToCartButton(this)" class="border-accent border-2 text-accent font-semibold hover:bg-accent hover:text-white duration-300 px-2 py-2 rounded-md">
             ADD TO CART
           </button>
         </div>
