@@ -5,7 +5,7 @@ allProducts = [
     category: "T-shirt",
     price: 24.99,
     description: "Simplicity meets style with our Modern Minimalist Tee",
-    image: "products_images/tshirts/whitet.jpg",
+    image: "products_images/tshirts/whitet-min.jpg",
   },
   {
     name: "Heather Gray Tee",
@@ -14,7 +14,7 @@ allProducts = [
     price: 25.99,
     description:
       "A versatile heather gray shade that resonates with contemporary fashion",
-    image: "products_images/tshirts/grayt.jpg",
+    image: "products_images/tshirts/grayt-min.jpg",
   },
   {
     name: "Monochrome Tee",
@@ -22,7 +22,7 @@ allProducts = [
     category: "T-shirt",
     price: 27.99,
     description: "Deep black hue and contemporary silhouette",
-    image: "products_images/tshirts/blackt.jpg",
+    image: "products_images/tshirts/blackt-min.jpg",
   },
   {
     name: "Classic Navy Tee",
@@ -30,7 +30,7 @@ allProducts = [
     category: "T-shirt",
     price: 29.99,
     description: "Elevate your style with our navy blue classic tee",
-    image: "products_images/tshirts/navyt.jpg",
+    image: "products_images/tshirts/navyt-min.jpg",
   },
   {
     name: "Subtle Green Tee",
@@ -38,7 +38,7 @@ allProducts = [
     category: "T-shirt",
     price: 26.99,
     description: "A refreshing hue that complements your modern lifestyle",
-    image: "products_images/tshirts/greent.jpg",
+    image: "products_images/tshirts/greent-min.jpg",
   },
   {
     name: "Vibrant Red Tee",
@@ -47,16 +47,15 @@ allProducts = [
     price: 23.99,
     description:
       "Unleash your confidence with this bold addition to your collection",
-    image: "products_images/tshirts/redt.jpg",
+    image: "products_images/tshirts/redt-min.jpg",
   },
   {
     name: "Sky Comfort Tee",
-    color: "Sky blue",
+    color: "Blue",
     category: "T-shirt",
-    price: 25.99,
-    description:
-      "The perfect balance of style and sky for your everyday adventures",
-    image: "products_images/tshirts/skyt.jpg",
+    price: 22.99,
+    description: "Perfect balance of style and sky",
+    image: "products_images/tshirts/bluet-min.jpg",
   },
   {
     name: "Salmon Elegance Tee",
@@ -64,7 +63,7 @@ allProducts = [
     category: "T-shirt",
     price: 26.99,
     description: "A delicate salmon hue that embodies grace and sophistication",
-    image: "products_images/tshirts/salmont.jpg",
+    image: "products_images/tshirts/salmont-min.jpg",
   },
 ];
 
