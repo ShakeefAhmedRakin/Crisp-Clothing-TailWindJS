@@ -25,20 +25,31 @@ allProducts = [
     image: "products_images/tshirts/blackt.jpg",
   },
   {
-    name: "Monochrome Tee",
-    color: "Black",
+    name: "Navy Blue Classic",
+    color: "Navy Blue",
     category: "T-shirt",
-    price: 27.99,
-    description: "Simplicity meets style with our Modern Minimalist Tee",
-    image: "products_images/tshirts/whitet.jpg",
+    price: 29.99,
+    description:
+      "Elevate your style with our navy blue classic tee. Timeless design meets contemporary fashion.",
+    image: "products_images/tshirts/navyt.jpg",
   },
   {
-    name: "Monochrome Tee",
-    color: "Black",
+    name: "Subtle Green Tee",
+    color: "Green",
     category: "T-shirt",
-    price: 27.99,
-    description: "Simplicity meets style with our Modern Minimalist Tee",
-    image: "products_images/tshirts/whitet.jpg",
+    price: 26.99,
+    description:
+      "Find serenity in our subtle green tee. A refreshing hue that complements your modern lifestyle.",
+    image: "products_images/tshirts/greent.jpg",
+  },
+  {
+    name: "Vibrant Red Tee",
+    color: "Red",
+    category: "T-shirt",
+    price: 23.99,
+    description:
+      "Make a statement with our vibrant red tee. Unleash your confidence with this bold addition to your collection.",
+    image: "products_images/tshirts/redt.jpg",
   },
   {
     name: "Monochrome Tee",
@@ -55,15 +66,16 @@ allProducts = [
 // FILTERING OUT T SHIRTS ONLY
 const tShirts = allProducts.filter((product) => product.category === "T-shirt");
 // CREATING THE PRODUCT CARDS AND ADDING TO T SHIRT SECTION
-function showTshirt(count) {
+const showTshirt = (total) => {
   tShirtCatalogue = document.getElementById("tshirt-section");
-  tShirts.forEach((product) => {
+  tShirtCatalogue.innerHTML = "";
+  tShirts.slice(0, total).forEach((product) => {
     const productCardTemplate = `
     <div class="bg-white w-fit shadow-lg rounded-lg hover:scale-[1.003] duration-300 flex flex-col items-center p-2">
-      <img class="rounded-lg mb-4 w-[500px]" src="${product.image}" alt="" />
+      <img class="rounded-lg mb-4 w-full h-full object-cover" src="${product.image}" alt="PIC" />
       <div class="text-center space-y-2 px-4 w-full">
         <h3 class="text-lg sm:text-xl font-medium">${product.name}</h3>
-        <p class="text-gray-500 max-w-lg text-sm sm:text-base h-12 sm:h-16">${product.description}</p>
+        <p class="text-gray-500 max-w-lg text-sm sm:text-base h-16 lg:h-12">${product.description}</p>
         <div class="flex items-center justify-between w-full py-2">
           <span class="text-gray-500 text-xl">$ ${product.price}</span>
           <button onClick="addToCartButton()" class="border-accent border-2 text-accent font-semibold hover:bg-accent hover:text-white duration-300 px-2 py-2 rounded-md">
@@ -75,6 +87,16 @@ function showTshirt(count) {
   `;
     tShirtCatalogue.innerHTML += productCardTemplate;
   });
-}
-
-showTshirt(3);
+  const remainingProducts = tShirts.length - total;
+  if (remainingProducts > 0) {
+    document.getElementById("btn-seemore-tshirt").style.display = "block";
+  } else {
+    document.getElementById("btn-seemore-tshirt").style.display = "none";
+  }
+};
+let countOfTShirtShown = 3;
+showTshirt(countOfTShirtShown);
+document.getElementById("btn-seemore-tshirt").addEventListener("click", () => {
+  countOfTShirtShown += 3;
+  showTshirt(countOfTShirtShown);
+});
