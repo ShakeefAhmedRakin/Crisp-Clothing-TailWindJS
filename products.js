@@ -59,10 +59,18 @@ allProducts = [
       "The perfect balance of style and sky for your everyday adventures.",
     image: "products_images/tshirts/skyt.jpg",
   },
+  {
+    name: "Salmon Elegance Tee",
+    color: "Salmon Pink",
+    category: "T-shirt",
+    price: 26.99,
+    description:
+      "A delicate salmon hue that embodies grace and sophistication.",
+    image: "products_images/tshirts/salmont.jpg",
+  },
 ];
 
-// PRODUCT SECTIONS
-// T SHIRT SECTION
+// ----------------------- T SHIRT SECTION --------------------------------------------
 // FILTERING OUT T SHIRTS ONLY
 const tShirts = allProducts.filter((product) => product.category === "T-shirt");
 // CREATING THE PRODUCT CARDS AND ADDING TO T SHIRT SECTION
@@ -94,9 +102,12 @@ const showTshirt = (total) => {
     document.getElementById("btn-seemore-tshirt").style.display = "none";
   }
 };
+
+// SEE MORE BUTTON FUNCTIONALITY
 let countOfTShirtShown = 3;
 showTshirt(countOfTShirtShown);
 document.getElementById("btn-seemore-tshirt").addEventListener("click", () => {
   countOfTShirtShown += 3;
   showTshirt(countOfTShirtShown);
 });
+// -----------------------------------------------------------------------------------
