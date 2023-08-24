@@ -1,6 +1,6 @@
 allProducts = [
   {
-    name: "Classic White T-Shirt",
+    name: "Classic White Tee",
     color: "White",
     category: "T-shirt",
     price: 24.99,
@@ -25,7 +25,7 @@ allProducts = [
     image: "products_images/tshirts/blackt.jpg",
   },
   {
-    name: "Navy Blue Classic",
+    name: "Classic Navy Tee",
     color: "Navy Blue",
     category: "T-shirt",
     price: 29.99,
@@ -38,8 +38,7 @@ allProducts = [
     color: "Green",
     category: "T-shirt",
     price: 26.99,
-    description:
-      "Find serenity in our subtle green tee. A refreshing hue that complements your modern lifestyle.",
+    description: "A refreshing hue that complements your modern lifestyle.",
     image: "products_images/tshirts/greent.jpg",
   },
   {
@@ -48,16 +47,17 @@ allProducts = [
     category: "T-shirt",
     price: 23.99,
     description:
-      "Make a statement with our vibrant red tee. Unleash your confidence with this bold addition to your collection.",
+      "Unleash your confidence with this bold addition to your collection.",
     image: "products_images/tshirts/redt.jpg",
   },
   {
-    name: "Monochrome Tee",
-    color: "Black",
+    name: "Sky Comfort Tee",
+    color: "Sky blue",
     category: "T-shirt",
-    price: 27.99,
-    description: "Simplicity meets style with our Modern Minimalist Tee",
-    image: "products_images/tshirts/whitet.jpg",
+    price: 25.99,
+    description:
+      "The perfect balance of style and sky for your everyday adventures.",
+    image: "products_images/tshirts/skyt.jpg",
   },
 ];
 
@@ -72,7 +72,7 @@ const showTshirt = (total) => {
   tShirts.slice(0, total).forEach((product) => {
     const productCardTemplate = `
     <div class="bg-white w-fit shadow-lg rounded-lg hover:scale-[1.003] duration-300 flex flex-col items-center p-2">
-      <img class="rounded-lg mb-4 w-full h-full object-cover" src="${product.image}" alt="PIC" />
+      <img class="rounded-lg mb-4 w-full h-[300px] object-cover object-top" src="${product.image}" alt="PIC" />
       <div class="text-center space-y-2 px-4 w-full">
         <h3 class="text-lg sm:text-xl font-medium">${product.name}</h3>
         <p class="text-gray-500 max-w-lg text-sm sm:text-base h-16 lg:h-12">${product.description}</p>
