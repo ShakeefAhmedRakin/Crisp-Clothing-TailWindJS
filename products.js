@@ -71,8 +71,8 @@ const showTshirt = (total) => {
   tShirtCatalogue.innerHTML = "";
   tShirts.slice(0, total).forEach((product) => {
     const productCardTemplate = `
-    <div class="bg-white w-fit shadow-lg rounded-lg hover:scale-[1.003] duration-300 flex flex-col items-center p-2">
-      <img class="rounded-lg mb-4 w-full h-[300px] object-cover object-top" src="${product.image}" alt="PIC" />
+    <div class="bg-white w-full shadow-lg rounded-lg hover:scale-[1.003] duration-300 flex flex-col items-center p-2">
+      <img class="rounded-lg mb-4 w-full h-[300px] object-cover" src="${product.image}" alt="PIC" />
       <div class="text-center space-y-2 px-4 w-full">
         <h3 class="text-lg sm:text-xl font-medium">${product.name}</h3>
         <p class="text-gray-500 max-w-lg text-sm sm:text-base h-16 lg:h-12">${product.description}</p>
