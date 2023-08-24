@@ -29,8 +29,7 @@ allProducts = [
     color: "Navy Blue",
     category: "T-shirt",
     price: 29.99,
-    description:
-      "Elevate your style with our navy blue classic tee. Timeless design meets contemporary fashion.",
+    description: "Elevate your style with our navy blue classic tee",
     image: "products_images/tshirts/navyt.jpg",
   },
   {
@@ -38,7 +37,7 @@ allProducts = [
     color: "Green",
     category: "T-shirt",
     price: 26.99,
-    description: "A refreshing hue that complements your modern lifestyle.",
+    description: "A refreshing hue that complements your modern lifestyle",
     image: "products_images/tshirts/greent.jpg",
   },
   {
@@ -47,7 +46,7 @@ allProducts = [
     category: "T-shirt",
     price: 23.99,
     description:
-      "Unleash your confidence with this bold addition to your collection.",
+      "Unleash your confidence with this bold addition to your collection",
     image: "products_images/tshirts/redt.jpg",
   },
   {
@@ -56,7 +55,7 @@ allProducts = [
     category: "T-shirt",
     price: 25.99,
     description:
-      "The perfect balance of style and sky for your everyday adventures.",
+      "The perfect balance of style and sky for your everyday adventures",
     image: "products_images/tshirts/skyt.jpg",
   },
   {
@@ -64,8 +63,7 @@ allProducts = [
     color: "Salmon Pink",
     category: "T-shirt",
     price: 26.99,
-    description:
-      "A delicate salmon hue that embodies grace and sophistication.",
+    description: "A delicate salmon hue that embodies grace and sophistication",
     image: "products_images/tshirts/salmont.jpg",
   },
 ];
@@ -83,7 +81,7 @@ const showTshirt = (total) => {
       <img class="rounded-lg mb-4 w-full h-[300px] object-cover" src="${product.image}" alt="PIC" />
       <div class="text-center space-y-2 px-4 w-full">
         <h3 class="text-lg sm:text-xl font-medium">${product.name}</h3>
-        <p class="text-gray-500 max-w-lg text-sm sm:text-base h-16 lg:h-12">${product.description}</p>
+        <p class="text-gray-500 max-w-lg text-sm sm:text-base h-16 xl:h-12">${product.description}</p>
         <div class="flex items-center justify-between w-full py-2">
           <span class="text-gray-500 text-xl">$ ${product.price}</span>
           <button onClick="addToCartButton()" class="border-accent border-2 text-accent font-semibold hover:bg-accent hover:text-white duration-300 px-2 py-2 rounded-md">
@@ -104,10 +102,15 @@ const showTshirt = (total) => {
 };
 
 // SEE MORE BUTTON FUNCTIONALITY
-let countOfTShirtShown = 3;
+if (screen.width >= 768 && screen.width < 1024) {
+  stepSize = 4;
+} else {
+  stepSize = 3;
+}
+let countOfTShirtShown = stepSize;
 showTshirt(countOfTShirtShown);
 document.getElementById("btn-seemore-tshirt").addEventListener("click", () => {
-  countOfTShirtShown += 3;
+  countOfTShirtShown += stepSize;
   showTshirt(countOfTShirtShown);
 });
 // -----------------------------------------------------------------------------------
