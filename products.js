@@ -78,7 +78,9 @@ const renderProductCards = (total) => {
   tShirts.slice(0, total).forEach((product) => {
     const productCardTemplate = `
     <div class="bg-white w-full shadow-lg rounded-lg hover:scale-[1.003] duration-300 flex flex-col items-center p-2">
-      <img class="rounded-lg mb-4 w-full h-[300px] object-cover" src="${product.image}" alt="" />
+      <div class="relative overflow-hidden rounded-lg mb-4 w-full h-[300px]">
+        <img class="absolute inset-0 w-full h-full object-cover duration-300 hover:scale-[1.20]" src="${product.image}" alt="" />
+      </div>
       <div class="text-center space-y-2 px-4 w-full">
         <h3 class="text-lg sm:text-xl font-medium">${product.name}</h3>
         <p class="text-gray-500 max-w-lg text-sm sm:text-base h-16 xl:h-12">${product.description}</p>
