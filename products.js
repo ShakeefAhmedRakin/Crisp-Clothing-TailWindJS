@@ -78,20 +78,37 @@ const renderProductCards = (total) => {
   tShirts.slice(0, total).forEach((product) => {
     const productCardTemplate = `
     <div class="bg-white w-full shadow-lg rounded-lg hover:scale-[1.003] duration-300 flex flex-col items-center p-2">
-      <div class="relative overflow-hidden rounded-lg mb-4 w-full h-[300px]">
-        <img class="absolute inset-0 w-full h-full object-cover duration-300 hover:scale-[1.20]" src="${product.image}" alt="" />
-      </div>
-      <div class="text-center space-y-2 px-4 w-full">
-        <h3 class="text-lg sm:text-xl font-medium">${product.name}</h3>
-        <p class="text-gray-500 max-w-lg text-sm sm:text-base h-16 xl:h-12">${product.description}</p>
-        <div class="flex items-center justify-between w-full py-2">
-          <span class="text-gray-500 text-xl">$ ${product.price}</span>
-          <button onClick="addToCartButton(this)" class="border-accent border-2 text-accent font-semibold hover:bg-accent hover:text-white duration-300 px-2 py-2 rounded-md">
-            ADD TO CART
-          </button>
-        </div>
+  <div class="relative overflow-hidden rounded-lg mb-4 w-full h-[300px]">
+    <img class="absolute inset-0 w-full h-full object-cover duration-300 hover:scale-[1.20]" src="${product.image}" alt="" />
+  </div>
+  <div class="text-center space-y-2 px-4 w-full">
+    <h3 class="text-lg sm:text-xl font-medium">${product.name}</h3>
+    <p class="text-gray-500 max-w-lg text-sm sm:text-base h-16 xl:h-12">${product.description}</p>
+    
+    <!-- Size Selection -->
+    <div class="flex items-center justify-end w-full py-2">
+
+      <div class="flex space-x-2">
+        <input type="radio" name="size-${product.name}" value="S" class="mr-1">
+        <label class="text-gray-500">S</label>
+        <input type="radio" name="size-${product.name}" value="M" class="mr-1">
+        <label class="text-gray-500">M</label>
+        <input type="radio" name="size-${product.name}" value="L" class="mr-1">
+        <label class="text-gray-500">L</label>
+        <input type="radio" name="size-${product.name}" value="XL" class="mr-1">
+        <label class="text-gray-500">XL</label>
       </div>
     </div>
+    
+    <div class="flex items-center justify-between w-full py-2">
+      <span class="text-gray-500 text-xl">$ ${product.price}</span>
+      <button onClick="addToCartButton(this)" class="border-accent border-2 text-accent font-semibold hover:bg-accent hover:text-white duration-300 px-2 py-2 rounded-md">
+        ADD TO CART
+      </button>
+    </div>
+  </div>
+</div>
+
   `;
     tShirtCatalogue.innerHTML += productCardTemplate;
   });
